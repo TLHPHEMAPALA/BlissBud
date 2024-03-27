@@ -127,8 +127,8 @@ export default function Questionarie() {
     <div >
        <Navbar/>
 
-      <h2 className='flex justify-center pb-1 mt-5  mb-12 text-3xl font-semibold'>Ready to Change the way you feel ?</h2>
-      <p className='flex justify-center text-center text-2xl'>We all face daily challenges.But no matter what your are going through , there are skills you can learn that can profoundly imporove mental state.</p>
+      <h2 className='flex justify-center pb-1 mt-5 mb-12 text-3xl font-semibold'>Ready to Change the way you feel ?</h2>
+      <p className='flex justify-center text-2xl text-center'>We all face daily challenges.But no matter what your are going through , there are skills you can learn that can profoundly imporove mental state.</p>
       <Question  questionarie={questionarisArr}></Question>
     </div>
   )

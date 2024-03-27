@@ -3,21 +3,19 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800  ">
-      <div className="max-w-7xl mx-auto px-4">
+    <nav className="bg-gradient-to-r from-purple-600 to-indigo-600">
+      <div className="px-4 mx-auto max-w-7xl">
         <div className="flex justify-between h-16">
-         
-          <div className="flex-shrink-0 flex items-center mr-40">
+          <div className="flex items-center flex-shrink-0">
             <Link to="/">
-              <h1 className='mb-3 text-2xl font-semibold'>BlissBud</h1>
+              <h1 className='mb-3 text-2xl font-semibold text-white'>BlissBud</h1>
             </Link>
           </div>
-
           <div className="hidden md:block">
             <div className="flex items-center space-x-10">
-              <Link to="/music" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Music</Link>
-              <Link to="/meditation" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Meditation</Link>
-              <Link to="/videos" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Videos</Link>
+              <Link to="/music" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Music</Link>
+              <Link to="/meditation" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Meditation</Link>
+              <Link to="/videos" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Videos</Link>
             </div>
           </div>
         </div>
