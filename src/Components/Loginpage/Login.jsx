@@ -35,7 +35,7 @@ export default function Login() {
 
     
     return (
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center'style={{  background: 'linear-gradient(135deg, #FFB6C1, #FFDAB9)'}}>
             <div className='px-8 py-8 bg-white border-2 rounded-3xl'>
                 <h1 className='mb-3 text-5xl font-semibold'>BlissBud</h1>
                 <p className='mb-6 text-lg font-medium text-gray-500'>Welcome back! Please enter your details.</p>

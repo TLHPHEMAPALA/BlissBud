@@ -1,14 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Navbar from '../NavBar/nav';
 import Videos from '../Videos/Videos';
-import Footer from '../Footer/Footer';
 import axios from 'axios';
-
+import Footer from '../Footer/Footer';
 
 const Music = () => {
   const videoRef = useRef(null);
   const [cameraOn, setCameraOn] = useState(false);
   const [capturedImages, setCapturedImages] = useState([]);
+  const [emotion, setEmotion]=useState('')
 
   useEffect(() => {
     let intervalId;
@@ -48,31 +48,42 @@ const Music = () => {
     setCameraOn(false);
   };
 
+
+
   const captureImage = () => {
     const canvas = document.createElement('canvas');
     canvas.width = videoRef.current.videoWidth;
     canvas.height = videoRef.current.videoHeight;
-    canvas.getContext('2d').drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
 
-    const imageData = canvas.toDataURL('image/png');
+   
+    canvas.toBlob((blob) => {
+       
+        const file = new File([blob], 'image.png', { type: 'image/png' });
+        
     
-    predictEmotion(imageData)
-  };
+       
+        predictEmotion(file);
+    }, 'image/png');
+};
+
 
   const predictEmotion = async (file) => {
     const formData = new FormData();
     formData.append('file', file);
   
     try {
-      const response = await axios.post('http://127.0.0.1:8002/predict_emotion', formData);
-      console.log(response.data);
+      const response = await axios.post('http://localhost:8002/predict_emotion', formData);
+      console.log(response.data.predicted_emotion);
+      setEmotion(response.data.predicted_emotion)
     } catch (error) {
       console.error('Error:', error);
     }
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full p-10" style={{  background: 'linear-gradient(135deg, #FFB6C1, #FFDAB9)'}}>
       <Navbar />
       <div className="flex flex-col items-center justify-center w-full">
         <h1 className="p-8 mt-4 text-4xl font-semibold text-gray-800">
@@ -98,19 +109,20 @@ const Music = () => {
           </button>
         )}
       </div>
-      <div className="flex flex-wrap justify-center m-10 ">
+      <div className='flex justify-center w-full'>
+        Your Emotion : {emotion}
+      </div>
+      <div className="flex flex-wrap justify-center mt-8">
         {capturedImages.map((image, index) => (
           <div key={index} className="m-2">
             <img src={image} alt={`Captured ${index}`} className="object-cover w-40 h-40 rounded-lg" />
           </div>
         ))}
       </div>
-      <div>
+      <div className="p-10">
         <Videos />
       </div>
-      <div className='mt-10'>
-        <Footer/>
-      </div>
+      <Footer/>
     </div>
   );
 };

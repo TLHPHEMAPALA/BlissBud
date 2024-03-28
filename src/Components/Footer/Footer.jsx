@@ -26,7 +26,7 @@ export default function Footer() {
             <p>Phone: +94 75 64 10 375</p>
           </div>
         </div>
-        <div className="mt-8 text-sm text-center">
+        <div className="mt-20 text-sm text-center ">
           <p>&copy; 2024 Hiruni Liyanage. All rights reserved.</p>
         </div>
       </div>

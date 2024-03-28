@@ -51,7 +51,7 @@ const Videos = () => {
   };
 
   return (
-    <div className=''>
+    <div className='p-10' style={{  background: 'linear-gradient(135deg, #FFB6C1, #FFDAB9)'}}>
       <h1 className="mb-4 text-2xl font-bold"></h1>
       <input
         type="text"

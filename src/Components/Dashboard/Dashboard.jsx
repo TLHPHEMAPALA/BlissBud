@@ -10,10 +10,10 @@ import Footer from '../Footer/Footer';
 
 export default function Dashboard() {
   return (
-    <div className='p-10'>
+    <div className='p-10' style={{  background: 'linear-gradient(135deg, #FFB6C1, #FFDAB9)'}}>
       <Navbar/>
       <Content/>
-      <div className="flex items-center justify-center h-screen page ">
+      <div className="flex items-center justify-center h-screen page " >
         <div className="flex flex-col items-center justify-center w-1/2 ">
           <h1 className="mb-8 text-5xl font-bold text-white ">What do u want to try ?</h1>
           <div className="grid grid-cols-2 gap-8">
