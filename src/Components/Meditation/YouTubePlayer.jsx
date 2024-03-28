@@ -1,4 +1,4 @@
-// YouTubePlayer.js
+
 import React from 'react';
 
 const YouTubePlayer = ({ videoId }) => {

@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import Navbar from '../NavBar/nav';
 import Videos from '../Videos/Videos';
 import Footer from '../Footer/Footer';
+import axios from 'axios';
+
 
 const Music = () => {
   const videoRef = useRef(null);
@@ -53,7 +55,20 @@ const Music = () => {
     canvas.getContext('2d').drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
 
     const imageData = canvas.toDataURL('image/png');
-    setCapturedImages(prevImages => [...prevImages, imageData]);
+    
+    predictEmotion(imageData)
+  };
+
+  const predictEmotion = async (file) => {
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    try {
+      const response = await axios.post('http://127.0.0.1:8002/predict_emotion', formData);
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (

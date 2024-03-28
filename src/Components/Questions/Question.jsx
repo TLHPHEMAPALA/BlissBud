@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
 import Footer from '../Footer/Footer';
 
 export default function Question({ questionarie }) {
@@ -46,9 +45,9 @@ export default function Question({ questionarie }) {
                     <p>Level of Mental: {levelOfMental.toFixed(2)}%</p>
                 </div>
                 <div>
-                    <Button component={Link} to="/dashboard" variant="contained" color="primary">
+                    <Link component={Link} to="/dashboard" variant="contained" color="primary">
                         Go to Dashboard
-                    </Button>
+                    </Link>
                 </div>
             </div>
             <div>

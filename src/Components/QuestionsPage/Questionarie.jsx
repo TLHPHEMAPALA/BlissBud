@@ -124,7 +124,7 @@ export default function Questionarie() {
 
   ]
   return (
-    <div >
+    <div className='p-10' >
        <Navbar/>
 
       <h2 className='flex justify-center pb-1 mt-5 mb-12 text-3xl font-semibold'>Ready to Change the way you feel ?</h2>

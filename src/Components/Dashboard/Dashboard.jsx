@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer';
 
 export default function Dashboard() {
   return (
-    <div>
+    <div className='p-10'>
       <Navbar/>
       <Content/>
       <div className="flex items-center justify-center h-screen page ">
@@ -22,14 +22,14 @@ export default function Dashboard() {
             </div>
            
             <div className="flex items-center justify-center w-48 h-48 p-5 text-xl font-semibold text-white transition duration-300 bg-green-400 rounded-lg shadow-md card hover:bg-green-500">
-            <Link to="/Meditation" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Meditation</Link>
+            <Link to="/Videos" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Video</Link>
               
             </div>
             <div className="flex items-center justify-center w-48 h-48 p-5 text-xl font-semibold text-white transition duration-300 bg-yellow-400 rounded-lg shadow-md card hover:bg-yellow-500">
             <Link to="/Meditation" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Meditation</Link>
             </div>
             <div className="flex items-center justify-center w-48 h-48 text-xl font-semibold text-white transition duration-300 bg-red-400 rounded-lg shadow-md card hover:bg-red-500">
-            <Link to="/" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Contact </Link>
+            <Link to="/Contact" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Contact </Link>
             </div>
           </div>
         </div>

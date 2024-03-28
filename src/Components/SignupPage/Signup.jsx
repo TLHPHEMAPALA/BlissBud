@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import DashboardImage from './../../Assests/Dashboard.png';
 import { Link } from 'react-router-dom';
 import { auth } from '../../config/firebase';
