@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Music from './Components/Music/Music';
 import Meditation from './Components/Meditation/Meditation';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
                    <Route path ="/Dashboard" element ={<Dashboard/>}> </Route>
                    <Route path ="/Music" element ={<Music/>}> </Route>
                    <Route path ="/Meditation" element ={<Meditation/>}> </Route>
+                   <Route path ="/Contact" element ={<Contact/>}> </Route>
              </Routes>
           </BrowserRouter>
       </div>

@@ -5,7 +5,7 @@ import sideImage from '../../Assests/Dashboard.png';
 import './style.css';
 import Content from '../Article/Article';
 import ContentTwo from '../Article/ArticleTwo';
-
+import Footer from '../Footer/Footer';
 
 
 export default function Dashboard() {
@@ -15,21 +15,21 @@ export default function Dashboard() {
       <Content/>
       <div className="flex items-center justify-center h-screen page ">
         <div className="flex flex-col items-center justify-center w-1/2 ">
-          <h1 className="mb-8 text-5xl font-bold text-white  ">What do u want to try ?</h1>
+          <h1 className="mb-8 text-5xl font-bold text-white ">What do u want to try ?</h1>
           <div className="grid grid-cols-2 gap-8">
             <div className="flex items-center justify-center w-48 h-48 text-xl font-semibold text-white transition duration-300 bg-blue-400 rounded-lg shadow-md card hover:bg-blue-500">
-            <Link to="/Questionarie" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Lets' Say HI</Link>
+            <Link to="/Music" className="px-4 py-3 text-xl font-medium text-center text-white rounded-md hover:text-center">Wanna hear nice music ?</Link>
             </div>
            
-            <div className="p-5 flex items-center justify-center w-48 h-48 text-xl font-semibold text-white transition duration-300 bg-green-400 rounded-lg shadow-md card hover:bg-green-500">
-            <Link to="/Music" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Wanna hear nice music ?</Link>
+            <div className="flex items-center justify-center w-48 h-48 p-5 text-xl font-semibold text-white transition duration-300 bg-green-400 rounded-lg shadow-md card hover:bg-green-500">
+            <Link to="/Meditation" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Meditation</Link>
               
             </div>
-            <div className="p-5 flex items-center justify-center w-48 h-48 text-xl font-semibold text-white transition duration-300 bg-yellow-400 rounded-lg shadow-md card hover:bg-yellow-500">
-            <Link to="/Meditation" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Meditation</Link>
+            <div className="flex items-center justify-center w-48 h-48 p-5 text-xl font-semibold text-white transition duration-300 bg-yellow-400 rounded-lg shadow-md card hover:bg-yellow-500">
+            <Link to="/Meditation" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Meditation</Link>
             </div>
             <div className="flex items-center justify-center w-48 h-48 text-xl font-semibold text-white transition duration-300 bg-red-400 rounded-lg shadow-md card hover:bg-red-500">
-            <Link to="/" className="text-white hover:bg-gray-700 px-2 py-3 rounded-md text-xl font-medium">Call</Link>
+            <Link to="/" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Contact </Link>
             </div>
           </div>
         </div>
@@ -39,6 +39,7 @@ export default function Dashboard() {
         </div>
       </div>
       <ContentTwo/>
+      <Footer/>
     </div>
   );
 }

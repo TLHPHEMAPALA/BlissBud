@@ -2,6 +2,8 @@
 import React from 'react';
 import YouTubePlayer from './YouTubePlayer';
 import VideoSection from './VideoSection';
+import Navbar from '../NavBar/nav';
+import Footer from '../Footer/Footer';
 
 const Mediatation = () => {
   
@@ -28,11 +30,22 @@ const Mediatation = () => {
 
   return (
     <div className="container px-4 py-8 mx-auto">
-      <h1 className="mb-8 text-3xl font-semibold">YouTube Player</h1>
+      <Navbar />
+      <h1 className="mt-10 mb-8 text-4xl font-semibold text-center">
+        Meditation
+      </h1>
+      <p className='m-5 text-xl font-medium text-center'>
+      Meditation is the practice of allowing thoughts to come and go, as you learn to recognize and release them without judgment.
+      </p>
       <YouTubePlayer videoId="VIDEO_ID_HERE" />
       <h2 className="my-8 text-2xl font-semibold">More Videos</h2>
       <VideoSection videos={videos} />
+      
+      <div className='mt-10'>
+         <Footer/>
+      </div>
     </div>
+    
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Navbar from '../NavBar/nav';
 import Videos from '../Videos/Videos';
+import Footer from '../Footer/Footer';
 
 const Music = () => {
   const videoRef = useRef(null);
@@ -82,7 +83,7 @@ const Music = () => {
           </button>
         )}
       </div>
-      <div className="flex flex-wrap justify-center mt-8">
+      <div className="flex flex-wrap justify-center m-10 ">
         {capturedImages.map((image, index) => (
           <div key={index} className="m-2">
             <img src={image} alt={`Captured ${index}`} className="object-cover w-40 h-40 rounded-lg" />
@@ -91,6 +92,9 @@ const Music = () => {
       </div>
       <div>
         <Videos />
+      </div>
+      <div className='mt-10'>
+        <Footer/>
       </div>
     </div>
   );

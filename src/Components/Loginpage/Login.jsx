@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import DashboardImage from './../../Assests/Dashboard.png';
@@ -12,10 +12,13 @@ export default function Login() {
 
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
+    const navigate=useNavigate();
+
 
     const login=async()=>{
         await signInWithEmailAndPassword(auth, email, password).then(res=>{
             console.log('login')
+            navigate('/questionarie')
         }).catch(error=>{
             console.log(error)
         })
@@ -23,7 +26,7 @@ export default function Login() {
 
     
     return (
-        <div className='flex items-center justify-center border border-red-900'>
+        <div className='flex items-center justify-center'>
             <div className='px-8 py-8 bg-white border-2 rounded-3xl'>
                 <h1 className='mb-3 text-5xl font-semibold'>BlissBud</h1>
                 <p className='mb-6 text-lg font-medium text-gray-500'>Welcome back! Please enter your details.</p>
@@ -55,11 +58,11 @@ export default function Login() {
                     <button className='text-base font-medium text-violet-500'>Forgot password</button>
                 </div>
                 <div className='flex justify-center mt-8'>
-                    <Link to="/questionarie">
+                 
                         <button onClick={()=>{login()}} className='px-6 py-3 text-lg font-medium text-white rounded-full shadow-lg bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
                             Login
                         </button>
-                    </Link>
+                    
                 </div>
                 <div className='flex items-center justify-center mt-4'>
                     <p className='mr-2 text-base font-medium'>Don't you have an account?</p>

@@ -13,9 +13,10 @@ export default function Navbar() {
           </div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-10">
+              <Link to="dashboard" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Home</Link>
               <Link to="/music" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Music</Link>
               <Link to="/meditation" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Meditation</Link>
-              <Link to="/videos" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Videos</Link>
+              <Link to="/videos" className="px-2 py-3 text-xl font-medium text-white rounded-md hover:bg-gray-700">Contact</Link>
             </div>
           </div>
         </div>

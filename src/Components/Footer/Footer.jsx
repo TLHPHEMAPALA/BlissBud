@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -11,11 +12,11 @@ export default function Footer() {
           </div>
           <div className="w-full mb-4 md:w-1/4 md:mb-0">
             <h2 className="mb-4 text-xl font-bold">Links</h2>
-            <ul>
-              <li><a href="#">Dashoboard</a></li>
-              <li><a href="#">Music</a></li>
-              <li><a href="#">Mediatation</a></li>
-              <li><a href="#">Get a help</a></li>
+            <ul className='flex flex-col '>
+            <Link to="dashboard" className="px-2 text-white rounded-md hover:bg-gray-700">Home</Link>
+              <Link to="/music" className="px-2 text-white rounded-md hover:bg-gray-700">Music</Link>
+              <Link to="/meditation" className="px-2 text-white rounded-md hover:bg-gray-700">Meditation</Link>
+              <Link to="/videos" className="px-2 text-white rounded-md hover:bg-gray-700">Contact</Link>
             </ul>
           </div>
           <div className="w-full mb-4 md:w-1/4 md:mb-0">
